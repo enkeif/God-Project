@@ -1,6 +1,6 @@
 #include "Point2D.h"
 #include<iostream>
-#inclide<cmath>
+#include<cmath>
 
 using namespace std;
 
