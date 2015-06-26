@@ -61,8 +61,7 @@ public:
     
     virtual void Attack(Entity entityAttacked);
     virtual void Move();
-    virtual void DoAction()
-
+    virtual void DoAction(Entity entityAttacked);
 };
 
 #endif
