@@ -1,7 +1,12 @@
 #include "Scene.h"
-#icnlude<iostream>
+#include "Planet.h"
+#include<iostream>
 
 using namespace std;
+
+Scene::Scene() {
+	
+}
 
 Scene::Scene(Planet* p) 
 {
@@ -42,5 +47,14 @@ void Scene::CreateEntity(creature, p)
                   cout<<"There is no that kind of creature"<<endl;
                   break;
 
+}
+
+Scene::~Scene()
+{
+	while (!planets.empty())
+	{
+		delete planets.back();
+		planets.pop_back();
+	}
 }
 
