@@ -25,6 +25,7 @@ Entity::Entity(string name,double energy,double power,double size,double weight,
   this->state = state.Unknown;               
 };                   
 
+
              
 void Entity::Attack(Entity entityAttacked) {
      entityAttacked.setEnergy(entityAttacked.getEnergy() - this->getPower());
