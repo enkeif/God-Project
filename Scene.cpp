@@ -32,7 +32,7 @@ for (int i = 0; i < planet.size(); i++)
 void Scene::destroyPlanet()
 {
 	check();
-	for (unsigned int i = 0; i < planet.size(); i++)
+	for (int i = 0; i < planet.size(); i++)
 	{
 		if (planet[i]->getName() == planetName.data())
 		{
