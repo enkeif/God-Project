@@ -60,9 +60,9 @@ public:
         this->state = state;
     };    
     
-    virtual void Attack(Entity entityAttacked);
+    virtual void Attack(Entity& entityAttacked);
     virtual void Move();
-    virtual void DoAction(Entity entityAttacked);
+    virtual void DoAction(Entity& entityAttacked);
 };
 
 #endif
