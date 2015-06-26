@@ -14,7 +14,7 @@ Animal::Animal()
   this->state = State.Unknown;
 }
 
-Animal::Animal(string name,double energy,double power,double size,double weight,Point2D point,State state) : Entity(name, energy, power, size, weight, point, state);
+Animal::Animal(string name,double energy,double power,double size,double weight,Point2D point,State state) : Entity(name, energy, power, size, weight, point, state)
 {                
 }                   
 
