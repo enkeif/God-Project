@@ -12,7 +12,7 @@ Point2D::Point2D()
 Point2D::Point2D(double x, double y)
 { this->x = x;
   this->y = y;    
-  
+}  
 double Point2D::get_x() const
 { return this->x; }
 
