@@ -23,17 +23,23 @@ Entity::Entity(string name,double energy,double power,double size,double weight,
   this->weight = weight;
   this->point = new Point2D();
   this->state = state.Unknown;               
-};                   
+}                 
 
 
              
 void Entity::Attack(Entity entityAttacked) {
-     entityAttacked.setEnergy(entityAttacked.getEnergy() - this->getPower());
-};
+     RandomG r;
+   if(this->power > entityAttacked.getPower()) {
+     r.getRandomDamage(entityAttacked);  
+   };
+   this->setState(Attacking);
+}
      
 void Entity::Move() {
+     Random r;
+     this->position = r.getRanodmCordinates(); // dviji se random po koordinatnata sistema
      this->setState(Moving);
-};                     
+}                     
 
 void Entity::DoAction(State action) {
   switch (action)
@@ -46,5 +52,5 @@ void Entity::DoAction(State action) {
 	case Unknown:
 		setState(Unknown); break;
 	}
-}
+  }
 };
