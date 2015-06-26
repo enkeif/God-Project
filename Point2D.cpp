@@ -26,6 +26,6 @@ void Point2D::set_y(double y)
 { this->y = y; }
 
 double Point2D::Distance(Point2D &p1, Point2D &p2) 
-{ double result = sqrt((p1.x - p2.x)*(p1.x - p2.x) + (p1.y - p2.y)*(p1.y - p2.y));
+{ double result = sqrt(pow((p1.getX() - p2.getX()), 2) + pow((p1.getX() - p2.getX()), 2));
   return result;
 } 
