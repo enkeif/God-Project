@@ -37,11 +37,11 @@ void Scene::destroyPlanet()
 		if (planet[i]->getName() == planetName.data())
 		{
 			planet.erase(planet.cbegin() + i);
-			std::cout << "Iztri planeta\n";
-			std::cout << "\n";
+			cout << "Iztri planeta\n";
+			cout << "\n";
 		}
 		else
-			std::cout << "Nqma takava planeta\n";
+		        cout << "Nqma takava planeta\n";
 	}
 
 }
