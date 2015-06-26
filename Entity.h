@@ -3,9 +3,10 @@
 
 #include<string>
 
-#icnlude "Point2D.h"
+#include "Point2D.h"
 #include "EntityType.h"
 #include "EnumState.h"
+#include "RandomG"
 
 class Entity {
     
