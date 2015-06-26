@@ -15,6 +15,11 @@ Point2D RandomG::getRanodmCordinates()
 	return position;
 }
 
+double RandomG::RandomNumber() 
+{      	srand(time(NULL));
+	double number = rand() % 50 + 1;
+        return number;
+}
 
 void RandomG::getRandomDamage(Entity& someEntity)
 {
