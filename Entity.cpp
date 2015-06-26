@@ -23,13 +23,17 @@ Entity::Entity(string name,double energy,double power,double size,double weight,
   this->weight = weight;
   this->point = new Point2D();
   this->state = state.Unknown;               
-}                   
+};                   
 
              
 void Entity::Attack(Entity entityAttacked) {
      entityAttacked.setEnergy(entityAttacked.getEnergy() - this->getPower());
-}
+};
      
 void Entity::Move() {
      this->setState(Moving);
-}                     
+};                     
+
+void Entity::DoAction(AEntity entityAttacked) {
+    this.Attack(entityAttacked);
+};
