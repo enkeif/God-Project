@@ -30,7 +30,7 @@ void RandomG::getRandomDamage(Entity& someEntity)
 		break;
 	case 3:
 		someEntity.setEnergy(someEntity.getEnergy() - 3);
-		someEntity.setPowert(someEntity.getEnergy() - 1);
+		someEntity.setPower(someEntity.getEnergy() - 1);
 		break;
 	}
 }
