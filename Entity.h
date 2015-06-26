@@ -30,10 +30,10 @@ public:
     double getWeight() const {
         return weight;
     };
-    double getPoint() const {
+    Point2D getPoint() const {
         return point;
     };
-    double getState() const {
+    State getState() const {
         return state;
     };
     
