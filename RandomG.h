@@ -8,6 +8,7 @@ class RandomG
 {
 public:
 	Point2D getRanodmCordinates();
+	double RandomNumber();
 	void getRandomDamage(Entity& someEntity);
 };
 
