@@ -12,9 +12,25 @@ void Planet::erasePopulation()
 	population.erase(population.begin(), population.begin() + population.size()); //unishtojava cqloto naselenie na planetata
 }
 
-void Planet::addPopulation(Entity* e)
+void Planet::addPopulation(EntityType* e, int number)
 {
-	population.push_back(e);
+	for (int i = 0; i < number; i++)
+	{
+		switch (type)
+		{
+		case entity:
+			population.push_back(new Entity()); break;   //push_back adds element to the end of the vector
+		case animal:
+			population.push_back(new Animal()); break;
+		case human:
+			population.push_back(new Human()); break;
+		case god:
+			population.push_back(new God()); break;
+		case unknown:
+		        population.push_back(new God()); break;
+		}
+		
+	}
 }
 
 Planet::~Planet()
