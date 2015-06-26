@@ -7,18 +7,15 @@
 class God : public Human
 {
 private:
-	Scene* sc = new Scene;
+	Scene* scena = new Scene;
 public:
 	God();
-	God(std::string name);
-	God(God& s){*this = s;}
+	God(string name);
 	God& operator=(God& s);
 	void CreatePlanets();
-	void ErasePopulation(std::string planetName);
-	void DestroyPlanet(std::string planetName);
-	void AddEntity(std::string planetName, EntityType type, int number);
-	void GetStatistics();
-	bool Check();
+	void ErasePopulation(string planetName);
+	void DestroyPlanet(string planetName);
+	void AddEntity(string planetName, EntityType creature, int number);
 	~God();
 };
 #endif
