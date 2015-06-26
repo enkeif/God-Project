@@ -3,8 +3,9 @@
 
 #include<string>
 
+#icnlude "Point2D.h"
 #include "EntityType.h"
-#include "State.h"
+#include "EnumState.h"
 
 class Entity {
     
