@@ -7,12 +7,12 @@ Planet::Planet(string name) {
 	this->name = name;
 }
 
-void Planet::destroy()
+void Planet::erasePopulation()
 {
 	population.erase(population.begin(), population.begin() + population.size()); //unishtojava cqloto naselenie na planetata
 }
 
-void Planet::add(Entity* e)
+void Planet::addPopulation(Entity* e)
 {
 	population.push_back(e);
 }
