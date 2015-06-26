@@ -12,8 +12,8 @@ private:
 public:
   Scene();
   Scene(Planet* p);
-	void createEntity(EntityType creature, Planet p);
-	~Scene();
+  void createEntity(EntityType creature, Planet p);
+  ~Scene();
 };
 
 #endif
