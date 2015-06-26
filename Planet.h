@@ -17,7 +17,7 @@ public:
 	void setName(string name) { this->name = name; }
 	int getPopulation()const{ return population.size(); }
 	void erasePopulation();
-	void addPopulation(Entity* e);
+	void addPopulation(Entity* e, int number);
 	~Planet();
 
 };
