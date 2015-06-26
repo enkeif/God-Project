@@ -7,12 +7,22 @@
 class Scene
 {
 private:
-	vector<Planet*> planets;
+	vector<Planet*> planet;
+	string planetName;
+	EntityType creature;
+	int number;
 
 public:
   Scene();
-  Scene(Planet* p);
-  void createEntity(EntityType creature, Planet p);
+  void setPlanetName(string name){ this->planetName = name; };
+  void setEntity(EntityType& t){ this->creature = t; };
+  void setNumber(int n){ this->number = n; };
+  int getPlanetSize()const{ return planet.size(); }
+  
+  void createPlanets();
+  void erasePopulation();
+  void destroyPlanet();
+  void addEntity();
   ~Scene();
 };
 
