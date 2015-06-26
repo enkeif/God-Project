@@ -12,6 +12,7 @@ class Point2D
 private :
         double x ; 
         double y ; 
+}        
 public :
         Point2D(); 
         Point2D(double, double);
