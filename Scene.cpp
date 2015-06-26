@@ -8,53 +8,65 @@ Scene::Scene() {
 	
 }
 
-Scene::Scene(Planet* p) 
+void Scene::createPlanets()
 {
-	planets.push_back(p); //vkarva planetata v masiva
+	planet.push_back(new Planet(name));
 }
 
-void Scene::CreateEntity(creature, p)
-{ 
-          switch(creature)
-          {
-                
-              case animal:
-                  
-                  Animal m = new Animal("name");
-                  p.Add(m);
-                  break;
 
-              case entity:
-                  Entity q = new Entity(" ");
-                  p.Add(q);
-                  break;
+void Scene::erasePopulation()
+{
+for (int i = 0; i < planet.size(); i++)
+	{
+		if (planet[i]->getName() == planetName.data())
+		{
+			planet[i]->erasePopulation();  //vzima go ot planet.cpp
+			cout << "Iztri naselenieto na planetata \n";
+			cout << "\n";
+		}
+		else
+			cout << "Nqma takava planeta\n";
+	}
+}
 
-              case god:
-                  God n = new God(" ");
-                  p.Add(n);
-                  break;
+void Scene::destroyPlanet()
+{
+	check();
+	for (unsigned int i = 0; i < planet.size(); i++)
+	{
+		if (planet[i]->getName() == planetName.data())
+		{
+			planet.erase(planet.cbegin() + i);
+			std::cout << "Iztri planeta\n";
+			std::cout << "\n";
+		}
+		else
+			std::cout << "Nqma takava planeta\n";
+	}
 
-              case human:
-                  Human r = new Human(" ");
-                  p.Add(r);
-                  break;
+}
 
-              case unknown:
-                  Entity s = new Entity(" ");
-                  p.Add(s);
-                  break;
-              default:
-                  cout<<"There is no that kind of creature"<<endl;
-                  break;
+void Scene::addEntity()
+{
+	
+	for (int i = 0; i < planet.size(); i++)
+	{
 
+		if (planet[i]->getName() == planetName)
+		{
+				planet[i]->addPopulation(e, number);
+
+		}
+	}
+	
 }
 
 Scene::~Scene()
 {
-	while (!planets.empty())
+	while (!planet.empty())
 	{
-		delete planets.back();
-		planets.pop_back();
+		delete planet.back();
+		planet.pop_back();
 	}
 }
 
