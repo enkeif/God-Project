@@ -26,8 +26,6 @@ void Planet::addPopulation(EntityType* e, int number)
 			population.push_back(new Human()); break;
 		case god:
 			population.push_back(new God()); break;
-		case unknown:
-		        population.push_back(new God()); break;
 		}
 		
 	}
