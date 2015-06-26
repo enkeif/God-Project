@@ -16,7 +16,7 @@ void Planet::addPopulation(EntityType* e, int number)
 {
 	for (int i = 0; i < number; i++)
 	{
-		switch (type)
+		switch (e)
 		{
 		case entity:
 			population.push_back(new Entity()); break;   //push_back adds element to the end of the vector
