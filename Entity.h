@@ -6,15 +6,15 @@
 #include "Point2D.h"
 #include "EntityType.h"
 #include "EnumState.h"
-#include "RandomG"
+#include "RandomG.h"
 
 class Entity {
     
-private: string name, double energy, double power, double size, double weight, Point2D point, State state;
+private: string name, double energy, double power, double size, double weight, Point2D* point, State state;
 
 public:
     Entity();
-    Entity(string name,double energy,double power,double size,double weight, Point2D point,State state);
+    Entity(string name,double energy,double power,double size,double weight, Point2D* point,State state);
     
     string getName() const {
         return name;
