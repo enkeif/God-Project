@@ -11,11 +11,11 @@ Animal::Animal()
   this->power = 0;
   this->size = 0;
   this->weight = 0;
-  this->point = new Point2D();
+  point = new Point2D();
   this->state = State.Unknown;
 }
 
-Animal::Animal(string name,double energy,double power,double size,double weight,Point2D point,State state) : Entity(name, energy, power, size, weight, point, state)
+Animal::Animal(string name,double energy,double power,double size,double weight,Point2D* point,State state) : Entity(name, energy, power, size, weight, point, state)
 {                
 }                   
 
