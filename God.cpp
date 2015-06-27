@@ -42,8 +42,3 @@ God::~God()
 	delete scena;
 }
 
-God& God:: operator=(God& s)
-{
-	scena = s.scena;
-	retaurn *this;
-}
