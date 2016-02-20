@@ -1,3 +1,2 @@
-# God-Project
-God-Project
-oop
+# God - OOP project
+
